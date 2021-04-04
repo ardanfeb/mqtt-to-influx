@@ -10,12 +10,12 @@ const port = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-clientMQTT.subscribe('main/status/#');
+clientMQTT.subscribe('topic');
 clientMQTT.on('message', function (topic, message) {
 
 	try {
 		console.log('status: ' + topic);
-    		influx.writeMeasurement('data_device', [
+    		influx.writeMeasurement('measurement_name', [
       			{
         			tags: { topic: topic },
         			fields: { data: message.toString() },
