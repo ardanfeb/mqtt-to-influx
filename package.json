@@ -1,0 +1,17 @@
+{
+  "name": "nodeinflux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "influx": "^5.8.0",
+    "mqtt": "^4.2.6"
+  }
+}
